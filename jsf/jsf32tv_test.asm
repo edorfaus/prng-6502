@@ -5,11 +5,21 @@
 .segment "VECTORS"
 	.word IRQ, RESET, IRQ
 
-.include "jsf32.asm"
+.segment "ZEROPAGE"
+
+; These 4 temporary variables are required by the JSF32tv variant.
+; They do not have to be in ZP, but it improves both size and speed.
+TmpA: .res 1
+TmpB: .res 1
+TmpC: .res 1
+TmpD: .res 1
+
+.include "jsf32tv.asm"
 
 .out .sprintf("JSF32_Next size: %d bytes", * - JSF32_Next)
 
 .segment "ZEROPAGE"
+
 curTest: .res 1
 ptrTest: .res 2
 curIndex: .res 1
