@@ -9,3 +9,8 @@ in 6502 assembly (using [ca65][] from the [cc65][] suite).
 Currently included:
 
 - [JSF](/jsf/) : Jenkins Small Fast
+- [Xorshift](/xorshift/)
+
+Of these, I currently believe that JSF is the best choice for most
+relevant purposes, but as it depends on your use case, you will have to
+make your own choices.

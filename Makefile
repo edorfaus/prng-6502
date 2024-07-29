@@ -19,6 +19,9 @@ distclean:
 build/%_test.o: jsf/%_test.asm jsf/%.asm | build/
 	ca65 $(CAFLAGS) -o $@ $<
 
+build/%_test.o: xorshift/%_test.asm xorshift/%.asm | build/
+	ca65 $(CAFLAGS) -o $@ $<
+
 $(addprefix build/%.,nes dbg map)&: build/%.o $(LDCFG) | build/
 	ld65 -o $(basename $@).nes.tmp $(LDFLAGS) \
 		--dbgfile $(basename $@).dbg -m $(basename $@).map \
