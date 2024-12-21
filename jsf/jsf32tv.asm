@@ -8,7 +8,7 @@
 .segment "RAM"
 
 ; JSF32_State is the internal state of the JSF32 PRNG.
-; This should not be changed, except just before a call JSF32_Init.
+; This should not be changed, except just before a call to JSF32_Init.
 ; After a call to JSF32_Next, the first word holds the generated value.
 JSF32_State: .res 4*4
 

@@ -1,7 +1,7 @@
 .segment "RAM"
 
 ; JSF8_State is the internal state of the JSF8 PRNG.
-; This should not be changed, except just before a call JSF8_Init.
+; This should not be changed, except just before a call to JSF8_Init.
 ; After a call to JSF8_Next, the first byte holds the generated value.
 JSF8_State: .res 4
 

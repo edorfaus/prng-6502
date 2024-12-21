@@ -1,7 +1,7 @@
 .segment "RAM"
 
 ; JSF16_State is the internal state of the JSF16 PRNG.
-; This should not be changed, except just before a call JSF16_Init.
+; This should not be changed, except just before a call to JSF16_Init.
 ; After a call to JSF16_Next, the first word holds the generated value.
 JSF16_State: .res 2*4
 
